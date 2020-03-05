@@ -1,4 +1,4 @@
-# Diapositivas del Curso REDIS para Administradores de Sistemas - Módulo 2: Persistencia
+# Diapositivas del Curso REDIS para Administradores de Sistemas - Módulo 2: Estructuras de datos
 
 ## Índice
 
