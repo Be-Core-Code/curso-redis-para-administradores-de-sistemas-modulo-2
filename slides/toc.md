@@ -3,8 +3,8 @@
 #### Estructuras de datos
 
 * [Strings](/#strings)
-* [Lists](/#lists)
-* [Sets](/#sets)
+* [Listas](/#lists)
+* [Conjuntos](/#sets)
 * [Hashes](#/hashes)
 * [Sorted sets](#/sorted_sets)
 * [Otras estructuras de datos](/#other_data_structures)
