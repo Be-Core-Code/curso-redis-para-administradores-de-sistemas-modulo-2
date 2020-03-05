@@ -6,7 +6,7 @@
 * [Listas](/#lists)
 * [Conjuntos](/#sets)
 * [Hashes](#/hashes)
-* [Sorted sets](#/sorted_sets)
+* [Conjuntos ordenados](#/sorted_sets)
 * [Otras estructuras de datos](/#other_data_structures)
 
 notes:

@@ -23,5 +23,15 @@
 * [`SCARD`](https://redis.io/commands/scard): devuelve el número de elementos de un conjunto
 * [`SISMEMBER`](https://redis.io/commands/sismember): averigua si un elemento forma parte de un conjunto
 * [`SET`](https://redis.io/commands/set): crea una clave de tipo `STRING`
-* [`SSCAN`](https://redis.io/commands/sscan) / [`SMEMBERS`](https://redis.io/commands/smembers): listan los elementos
-  de un conjunto 
+* [`SSCAN`](https://redis.io/commands/sscan) / [`SMEMBERS`](https://redis.io/commands/smembers): listan los elementos 
+  de un conjunto
+* [`ZADD`](https://redis.io/commands/zadd): añade un elemento a un conjunto ordenado
+* [`ZINCRBY`](https://redis.io/commands/zincrby): incrementa el peso de un elemento de un conjunto ordenado
+* [`ZRANGE`](https://redis.io/commands/zrange): muestra los elementos de un conjunto ordenado por orden ascendente de
+  peso de los elementos
+* [`ZRANK`](https://redis.io/commands/zrank): devuelve la posición de un elemento de un conjunto ordenado  
+* [`ZREVRANGE`](https://redis.io/commands/zrevrange): muestra los elementos de un conjunto ordenado por orden descendente de
+  peso de los elementos
+* [`ZREVRANK`](https://redis.io/commands/zrevrank) : devuelve la posición de un elemento de un conjunto ordenado por orden
+  descendente de peso de los elementos  
+   
