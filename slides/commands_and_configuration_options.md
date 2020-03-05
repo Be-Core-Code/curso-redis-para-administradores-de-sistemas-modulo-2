@@ -12,4 +12,9 @@
 * [`LPUSH`](https://redis.io/commands/lpush): añade elementos a una lista por el principio
 * [`RPOP`](https://redis.io/commands/rpop): extrae un elemento de la lista por el final
 * [`RPUSH`](https://redis.io/commands/rpush): añade elemenos a la lista por el final
+* [`SADD`](https://redis.io/commands/sadd): añade elementos a un conjunto
+* [`SCARD`](https://redis.io/commands/scard): devuelve el número de elementos de un conjunto
+* [`SISMEMBER`](https://redis.io/commands/sismember): averigua si un elemento forma parte de un conjunto
 * [`SET`](https://redis.io/commands/set): crea una clave de tipo `STRING`
+* [`SSCAN`](https://redis.io/commands/sscan) / [`SMEMBERS`](https://redis.io/commands/smembers): listan los elementos
+  de un conjunto 
