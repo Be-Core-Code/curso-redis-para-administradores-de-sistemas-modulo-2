@@ -174,6 +174,66 @@ redis-cli > LRANGE jobs 0 -1
 
 ^^^^^^
 
+#### 💻️ Listas: rendimiento
+
+Existen tres implementaciones de las listas en redis:
+
+* **Listas enlazadas**: tienen un coste de almacenamiento de 40+ bytes por entrada.
+* **Ziplists**: almacena la lista en un bloque de memoria y utiliza _offsets_ en lugar de punteros
+* **quicklist**: es un híbrido de los dos: es una lista enlazada de ziplists
+  * `[ziplist 0] <-> [ziplist 1] <-> ... <-> [ziplist N]`
+
+notes:
+
+Si queremos almacenar un millón de enteros en una lista enlazada, ocuparíamos 4 MB con los datos y más de 40 MB
+con los punteros. Usando Ziplists el espacio adicional se reduciría a 1 MB.
+
+El problema que tiene un ziplist es que se trata de un bloque de memoria solido; con sólido entendemos que 
+los elementos se almancenan uno detrás de otro. El problema de esta estructura es que si queremos añadir o quitar elementos
+de la zona central de la lista, las operaciones son delicadas. 
+
+
+Más información en [este enlace](https://matt.sh/redis-quicklist)
+
+^^^^^^
+
+#### 💻️ Listas: rendimiento
+
+`[ziplist 0] <-> [ziplist 1] <-> ... <-> [ziplist N]`
+
+* `list-max-ziplist-size`: tamaño máximo del `ziplist`. Cuando se rebasa, se crea una 
+  nueva `ziplist`
+* Este tamaño puede ser un número exacto de elementos o un número negativo que representa el tamaño:
+
+```bash
+# -5: max size: 64 Kb  <-- not recommended for normal workloads
+# -4: max size: 32 Kb  <-- not recommended
+# -3: max size: 16 Kb  <-- probably not recommended
+# -2: max size: 8 Kb   <-- good
+# -1: max size: 4 Kb   <-- good
+```
+   
+notes:
+
+Esta información está sacada del fichero [redis.conf](http://download.redis.io/redis-stable/redis.conf).
+
+^^^^^^
+
+#### 💻️ Listas: rendimiento
+
+`[ziplist 0] <-> [ziplist 1] <-> ... <-> [ziplist N]`
+
+* `list-compress-depth`: activa la compresión de los `ziplists` de las listas
+* Por defecto no está activada
+* `list-compress-depth = 1`: se comprimen todos los nodos excepto el primero y el último
+* `list-compress-depth = 2`: se comprimen todos los nodos excepto los dos primeros y el los dos últimos
+* `list-compress-depth = 3`: se comprimen todos los nodos excepto los tres primeros y el los tres últimos
+* 
+
+[Más información](https://docs.redislabs.com/latest/ri/memory-optimizations/enable-compression-for-list/)   
+
+^^^^^^
+
 #### Listas
 
 [Comandos relacionados con listas](https://redis.io/commands#list)
