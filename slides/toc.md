@@ -7,7 +7,7 @@
 * [Conjuntos](/#sets)
 * [Hashes](#/hashes)
 * [Conjuntos ordenados](#/sorted_sets)
-* [Otras estructuras de datos](/#other_data_structures)
+* [Comandos y opciones de configuración](/#commands_and_configuration_options)
 
 notes:
 
