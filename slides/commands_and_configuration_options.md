@@ -39,12 +39,13 @@
   de un conjunto
 * [`ZADD`](https://redis.io/commands/zadd): añade un elemento a un conjunto ordenado
 * [`ZINCRBY`](https://redis.io/commands/zincrby): incrementa el peso de un elemento de un conjunto ordenado
-* [`ZRANGE`](https://redis.io/commands/zrange): muestra los elementos de un conjunto ordenado por orden ascendente de
-  peso de los elementos
+* [`ZSCORE`](https://redis.io/commands/zscore): devuelve el peso de un elemento de un conjunto ordenado  
 
 ^^^^^^
 #### Comandos utilizados en este módulo
 
+* [`ZRANGE`](https://redis.io/commands/zrange): muestra los elementos de un conjunto ordenado por orden ascendente de
+  peso de los elementos
 * [`ZRANK`](https://redis.io/commands/zrank): devuelve la posición de un elemento de un conjunto ordenado  
 * [`ZREVRANGE`](https://redis.io/commands/zrevrange): muestra los elementos de un conjunto ordenado por orden descendente de
   peso de los elementos

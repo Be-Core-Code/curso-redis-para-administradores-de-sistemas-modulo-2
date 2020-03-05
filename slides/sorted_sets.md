@@ -28,6 +28,16 @@ redis-cli > ZINCRBY caballeros -1 Bedevere
 "5" 
 ```
 
+notes:
+
+El incremento puede ser un número decimal, por ejemplo:
+
+```redis-cli
+redis-cli > ZINCRBY caballeros 0.5 Lancelot
+"5"
+```
+
+
 ^^^^^^
 #### 💻️ Conjuntos ordenados
 
@@ -101,6 +111,16 @@ redis-cli > ZRANK caballeros Lancelot
 (integer) 2
 redis-cli > ZREVRANK caballeros Lancelot
 (integer) 1 
+```
+
+^^^^^^
+#### 💻️ Conjuntos ordenados
+
+El comando [`ZSCORE`](https://redis.io/commands/zscore) nos devuelve el peso de un elemento del conjunto
+
+```redis-cli
+redis-cli > ZSCORE caballeros Arturo
+"5" 
 ```
 ^^^^^^
 
