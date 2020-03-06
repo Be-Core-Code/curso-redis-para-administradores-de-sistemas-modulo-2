@@ -224,7 +224,11 @@ Esta información está sacada del fichero [redis.conf](http://download.redis.io
 `[ziplist 0] <-> [ziplist 1] <-> ... <-> [ziplist N]`
 
 * `list-compress-depth`: activa la compresión de los `ziplists` de las listas
-* Por defecto no está activada
+* `list-compress-depth = 0`: valor por defecto (sin compresión)
+
+^^^^^^
+
+#### 💻️ Listas: rendimiento
 * `list-compress-depth = 1`: se comprimen todos los nodos excepto el primero y el último
 * `list-compress-depth = 2`: se comprimen todos los nodos excepto los dos primeros y el los dos últimos
 * `list-compress-depth = 3`: se comprimen todos los nodos excepto los tres primeros y el los tres últimos

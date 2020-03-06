@@ -78,7 +78,7 @@ redis-cli > ZRANGE caballeros 0 -1 WITHSCORES
 #### 💻️ Conjuntos ordenados
 
 
-```bash
+```redis-cli
 redis-cli > ZREVRANGE caballeros 0 -1 WITHSCORES
 1) "Arturo"
 2) "5"
