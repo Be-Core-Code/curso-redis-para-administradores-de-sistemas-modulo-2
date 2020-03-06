@@ -7,6 +7,7 @@
 * [Conjuntos](/#sets)
 * [Hashes](#/hashes)
 * [Conjuntos ordenados](#/sorted_sets)
+* [Protocolo de Redis](/#redis_protocol)
 * [Comandos y opciones de configuración](/#commands_and_configuration_options)
 
 notes:
